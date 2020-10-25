@@ -73,18 +73,23 @@
         <Button x:Name="btnAddToSale" Content="Add To Sale" HorizontalAlignment="Left" Margin="657,269,0,0" VerticalAlignment="Top" Height="20" Width="74"/>
         <Button x:Name="btnRemoveItem" Content="Remove Item" HorizontalAlignment="Left" Margin="657,309,0,0" VerticalAlignment="Top"/>
         <Button x:Name="btnCheckOut" Content="Check Out" HorizontalAlignment="Left" Margin="663,345,0,0" VerticalAlignment="Top" FontWeight="Bold" Height="28" Width="68"/>
-        <Menu Margin="10,-4,681,402">
+        <Menu x:Name="mnuMain" HorizontalAlignment="Left" Height="21" VerticalAlignment="Top"
+Width="131" Margin="0,26,0,0">
             <MenuItem Header="File">
-                <MenuItem Header="Exit"/>
+                <MenuItem Header="Exit" Click="exitToolStripMenuItem_Click"/>
             </MenuItem>
-            <MenuItem Header="Doghnuts">
+            <MenuItem Header="_Doghnuts">
                 <MenuItem Header="Make">
                     <MenuItem Header="Raised">
-                        <MenuItem x:Name="glazedMenuItem" Header="Glazed"/>
-                        <MenuItem x:Name="sugarMenuItem" Header="Sugar"/>
+                        <MenuItem x:Name="glazedToolStripMenuItem" Header="Glazed"
+Click="glazedToolStripMenuItem_Click" IsCheckable="True" AutomationProperties.Name="glazedToolStripMenuItem" IsEnabled="False"/>
+                        <MenuItem x:Name="sugarToolStripMenuItem" Header="Sugar"
+IsCheckable="True" Click="sugarToolStripMenuItem_Click" AutomationProperties.Name="sugarToolStripMenuItem"/>
                     </MenuItem>
                     <MenuItem Header="Filled"/>
                 </MenuItem>
+                <MenuItem x:Name="mnuStop" Header="Stop"/>
+
             </MenuItem>
         </Menu>
 
