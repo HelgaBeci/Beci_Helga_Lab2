@@ -86,4 +86,4 @@ namespace Beci_Helga_Lab2
                 MessageBox.Show("Numai cifre se pot introduce!", "Input Error", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
-    }
+    

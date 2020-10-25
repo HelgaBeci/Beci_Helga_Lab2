@@ -102,49 +102,45 @@ namespace Beci_Helga_Lab2
 class Doughnut
 {
     private DoughnutType mFlavor;
-    public DoughnutType Flavor;
 
-    get
-            {
-                return mFlavor;
+    public DoughnutType Flavor
+    {
+        get
+        {
+            return mFlavor;
         }
-            
-    set
-            {
-                mFlavor = value;
+        set
+        {
+            mFlavor = value;
         }
-            
-     }
-
-
-
+    }
     private float mPrice = .50F;
-public float Price
-{
-    get
+    public float Price
     {
-        return mPrice;
+        get
+        {
+            return mPrice;
+        }
+        set
+        {
+            mPrice = value;
+        }
     }
-    set
+    private readonly DateTime mTimeOfCreation;
+    public DateTime TimeOfCreation
     {
-        mPrice = value;
+        get
+        {
+            return mTimeOfCreation;
+        }
+
+    }
+    public Doughnut(DoughnutType aFlavor) // constructor
+    {
+        mTimeOfCreation = DateTime.Now;
+        mFlavor = aFlavor;
     }
 }
-private readonly DateTime mTimeOfCreation;
-public DateTime TimeOfCreation;
-{
-    get{
-        return mTimeOfCreation;
-    }
-}
-
-public Doughnut (DoughnutType aFlavor) //constructor
-{
-    mTimeOfCreation = DateTime.Now;
-    mFlavor = aFlavor;
-}
-}
 
 }
-
 
